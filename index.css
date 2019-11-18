@@ -154,7 +154,24 @@ body
 #wb_Text3 div
 {
    text-align: center;
-   white-space: nowrap;
+}
+#Layer1
+{
+   background-color: #3E91FF;
+   background-image: none;
+}
+#wb_Text4 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text4 div
+{
+   text-align: left;
 }
 #PageFooter1
 {
@@ -170,7 +187,7 @@ body
    top: 34px;
    width: 950px;
    height: 209px;
-   z-index: 5;
+   z-index: 6;
 }
 #wb_Text2
 {
@@ -180,7 +197,7 @@ body
    width: 250px;
    height: 76px;
    text-align: center;
-   z-index: 9;
+   z-index: 12;
 }
 #wb_Image1
 {
@@ -194,21 +211,48 @@ body
 #wb_Text3
 {
    position: absolute;
-   left: 500px;
-   top: 337px;
-   width: 474px;
-   height: 176px;
+   left: 31px;
+   top: 16px;
+   width: 412px;
+   height: 185px;
    text-align: center;
-   z-index: 8;
+   z-index: 5;
+}
+#wb_Text4
+{
+   position: absolute;
+   left: 345px;
+   top: 554px;
+   width: 308px;
+   height: 24px;
+   z-index: 10;
 }
 #wb_Image2
 {
    position: absolute;
-   left: 69px;
-   top: 303px;
-   width: 365px;
-   height: 266px;
-   z-index: 6;
+   left: 573px;
+   top: 282px;
+   width: 327px;
+   height: 237px;
+   z-index: 9;
+}
+#Layer1
+{
+   position: absolute;
+   text-align: center;
+   left: 99px;
+   top: 282px;
+   width: 474px;
+   height: 237px;
+   z-index: 8;
+}
+#Layer1_Container
+{
+   width: 474px;
+   position: relative;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: left;
 }
 #LayerFooter
 {
@@ -229,7 +273,7 @@ body
    top: 98px;
    width: 1000px;
    height: 617px;
-   z-index: 10;
+   z-index: 13;
 }
 #wb_Menu
 {
@@ -270,7 +314,7 @@ body
    top: 715px;
    width: 100%;
    height: 99px;
-   z-index: 11;
+   z-index: 14;
 }
 #LayerHeader_Container
 {
@@ -420,6 +464,42 @@ div#container
    top: 797px;
    width: 250px;
    height: 68px;
+   visibility: visible;
+   display: inline;
+   font-size: 13px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+}
+#Layer1
+{
+   left: 1077px;
+   top: 126px;
+   width: 200px;
+   height: 198px;
+   visibility: visible;
+   display: inline;
+   font-size: 13px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   background-color: #3E91FF;
+   background-image: none;
+}
+#Layer1_Container
+{
+   width: 200px;
+}
+#wb_Text4
+{
+   left: 0px;
+   top: 1118px;
+   width: 320px;
+   height: 62px;
    visibility: visible;
    display: inline;
    font-size: 13px;
