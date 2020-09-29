@@ -18,4 +18,10 @@
       <image:loc>http://pstroy.pro/images/stroitelstvo_kommercheskix_sooruzhenij_2_min.jpg</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>http://pstroy.pro/index2.html</loc>
+    <lastmod>2020-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
