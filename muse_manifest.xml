@@ -1,7 +1,7 @@
-<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="pstroy.pro" resolutions="1x" timestamp="1601362121161">
+<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="pstroy.pro" resolutions="1x" timestamp="1601362304711">
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
-    <file name="index.css" crc="450589948" ref="index"/>
+    <file name="index.css" crc="386710852" ref="index"/>
     <file name="index2.css" crc="504642437" ref="index2"/>
   </folder>
   <folder name="scripts">
@@ -35,6 +35,6 @@
       <caption webpage="index" alt=""/>
     </file>
   </folder>
-  <file name="index.html" crc="3786523852" seo="true" mt="1601362006514" redirect="true"/>
+  <file name="index.html" crc="238482116" seo="true" mt="1601362293549" redirect="true"/>
   <file name="index2.html" crc="153597879" seo="true" mt="1601361867525" redirect="false"/>
 </manifest>
