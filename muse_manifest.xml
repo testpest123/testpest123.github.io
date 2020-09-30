@@ -1,7 +1,7 @@
-<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="pstroy.pro" resolutions="1x" timestamp="1601459214253">
+<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="pstroy.pro" resolutions="1x" timestamp="1601460410690">
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
-    <file name="index.css" crc="3832913592" ref="index"/>
+    <file name="index.css" crc="4272333699" ref="index"/>
   </folder>
   <folder name="scripts">
     <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
@@ -22,8 +22,17 @@
     <file name="u246-4.png" crc="7753836" ref="index"/>
     <file name="u249-4.png" crc="3877870748" ref="index"/>
     <file name="u252-4.png" crc="4032366446" ref="index"/>
-    <file name="u281-4.png" crc="4286956131" ref="index"/>
+    <file name="u281-4.png" crc="152667463" ref="index"/>
     <file name="u278-6.png" crc="4269557262" ref="index"/>
+    <file name="6.jpg" crc="3980342107" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="remont_kvartir_1.jpg" crc="86161431" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="whatsapp-image-2019-11-28-at-235921.jpg" crc="169206352" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
   </folder>
-  <file name="index.html" crc="3902357290" seo="true" mt="1601459202108" redirect="true"/>
+  <file name="index.html" crc="3858209135" seo="true" mt="1601460388741" redirect="true"/>
 </manifest>
