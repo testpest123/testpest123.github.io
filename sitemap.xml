@@ -2,26 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://pstroy.pro/index.html</loc>
-    <lastmod>2020-09-29</lastmod>
+    <lastmod>2020-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
-      <image:loc>http://pstroy.pro/images/logo2.png</image:loc>
+      <image:loc>http://pstroy.pro/images/logo.png</image:loc>
     </image:image>
-    <image:image>
-      <image:loc>http://pstroy.pro/images/remont_kvartir_1-crop-u222.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://pstroy.pro/images/6.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://pstroy.pro/images/stroitelstvo_kommercheskix_sooruzhenij_2_min.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>http://pstroy.pro/index2.html</loc>
-    <lastmod>2020-09-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
 </urlset>
