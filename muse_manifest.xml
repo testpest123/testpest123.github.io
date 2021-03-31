@@ -1,17 +1,17 @@
-<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="pstroy.pro" resolutions="1x" timestamp="1617164699441">
+<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="pstroy.pro" resolutions="1x" timestamp="1617172128005">
   <folder name="images">
-    <file name="bg_main.jpg" crc="483843331" ref="index">
-      <caption webpage="index" alt=""/>
-    </file>
     <file name="favicon.ico" crc="1587414" ref="index"/>
-    <file name="u289-4.png" crc="9019174" ref="index"/>
     <file name="logo_all.png" crc="154545327" ref="index">
       <caption webpage="index" alt=""/>
     </file>
+    <file name="bg_main2.jpg" crc="3916322779" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u289-6.png" crc="4191417885" ref="index"/>
   </folder>
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
-    <file name="index.css" crc="4078316422" ref="index"/>
+    <file name="index.css" crc="136092718" ref="index"/>
   </folder>
   <folder name="scripts">
     <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
@@ -21,5 +21,5 @@
     <file name="require.js" crc="7928878" ref="index"/>
     <file name="jquery.musepolyfill.bgsize.js" crc="4260645839" ref="index"/>
   </folder>
-  <file name="index.html" crc="3763069771" seo="true" mt="1617164685395" redirect="true"/>
+  <file name="index.html" crc="303037795" seo="true" mt="1617172108861" redirect="true"/>
 </manifest>
