@@ -1,17 +1,23 @@
-<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="pstroy.pro" resolutions="1x" timestamp="1617175919885">
+<manifest alg="2" build="2018.1.0.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="pstroy.pro" resolutions="1x" timestamp="1617265814607">
   <folder name="images">
     <file name="favicon.ico" crc="1587414" ref="index"/>
-    <file name="logo_all.png" crc="154545327" ref="index">
+    <file name="logo_all.png" crc="481448066" ref="index">
       <caption webpage="index" alt=""/>
     </file>
     <file name="bg_main2.jpg" crc="3916322779" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="u328-6.png" crc="4085731718" ref="index"/>
+    <file name="u328-6.png" crc="3993207862" ref="index"/>
+    <file name="u497-19.png" crc="467340376" ref="index"/>
+    <file name="u475-16.png" crc="344306636" ref="index"/>
+    <file name="u261-4.png" crc="533135606" ref="index"/>
+    <file name="u255-6.png" crc="4252339788" ref="index"/>
+    <file name="u252-8.png" crc="127515010" ref="index"/>
+    <file name="u152-8.png" crc="71193354" ref="index"/>
   </folder>
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
-    <file name="index.css" crc="3776908074" ref="index"/>
+    <file name="index.css" crc="3871135754" ref="index"/>
   </folder>
   <folder name="scripts">
     <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
@@ -21,5 +27,5 @@
     <file name="require.js" crc="7928878" ref="index"/>
     <file name="jquery.musepolyfill.bgsize.js" crc="4260645839" ref="index"/>
   </folder>
-  <file name="index.html" crc="4189712428" seo="true" mt="1617175887319" redirect="true"/>
+  <file name="index.html" crc="4019511624" seo="true" mt="1617265806934" redirect="true"/>
 </manifest>
