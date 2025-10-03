@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
 <head>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Убирает прокрутку */
+        }
+        
+        .full-screen-image {
+            width: 100vw;    /* 100% ширины окна просмотра */
+            height: 100vh;   /* 100% высоты окна просмотра */
+            object-fit: cover; /* Сохраняет пропорции и заполняет весь экран */
+            display: block;  /* Убирает лишние отступы вокруг изображения */
+        }
+    </style>
 </head>
 <body>
-  <center>
-<img src="imgbg.jpg" alt="" class="full-screen-image"> 
-    </center>
+    <img src="imgbg.jpg" alt="" class="full-screen-image">
 </body>
 </html>
