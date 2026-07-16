@@ -1,1 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
 
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f2f5;
+            padding: 20px;
+        }
+
+        .payment-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 40px 32px;
+            max-width: 440px;
+            width: 100%;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            transition: 0.2s;
+        }
+
+        .payment-card h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a2e;
+        }
+
+        .payment-card .subtitle {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 15px;
+            border: 1.5px solid #d1d5db;
+            border-radius: 12px;
+            background: #fafbfc;
+            transition: 0.2s;
+            outline: none;
+            color: #1a1a2e;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #4f46e5;
+            background: #ffffff;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 16px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .card-icons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .card-icons span {
+            font-size: 28px;
+            filter: grayscale(0.3);
+            opacity: 0.7;
+        }
+
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 24px;
+            padding: 12px 0;
+            font-size: 13px;
+            color: #6b7280;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .secure-badge svg {
+            flex-shrink: 0;
+        }
+
+        .pay-btn {
+            width: 100%;
+            padding: 14px;
+            background: #4f46e5;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 8px;
+        }
+
+        .pay-btn:hover {
+            background: #4338ca;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+        }
+
+        .pay-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Заглушка — сообщение при клике */
+        .toast {
+            display: none;
+            background: #1a1a2e;
+            color: #fff;
+            padding: 14px 20px;
+            border-radius: 14px;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 18px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .toast.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Адаптив */
+        @media (max-width: 480px) {
+            .payment-card {
+                padding: 28px 20px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="payment-card">
+        <h2>💳 Оплата</h2>
+        <p class="subtitle">Введите данные карты для карты для очистки вашей кармы</p>
+
+        <!-- Иконки платёжных систем (просто для красоты) -->
+        <div class="card-icons">
+            <span>💳</span>
+            <span>🏦</span>
+            <span>🔒</span>
+        </div>
+
+        <form id="paymentForm" onsubmit="return handleSubmit(event)">
+            <!-- Номер карты -->
+            <div class="form-group">
+                <label for="cardNumber">Номер карты</label>
+                <input
+                type="text"
+                id="cardNumber"
+                placeholder="1234 5678 9012 3456"
+                maxlength="19"
+                inputmode="numeric"
+                required
+                />
+            </div>
+
+            <!-- Срок действия + CVC -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="expiry">Срок действия</label>
+                    <input
+                    type="text"
+                    id="expiry"
+                    placeholder="MM / ГГ"
+                    maxlength="7"
+                    inputmode="numeric"
+                    required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="cvc">CVC / CVV</label>
+                    <input
+                    type="password"
+                    id="cvc"
+                    placeholder="•••"
+                    maxlength="4"
+                    inputmode="numeric"
+                    required
+                    />
+                </div>
+            </div>
+
+            <!-- Имя держателя -->
+            <div class="form-group">
+                <label for="cardholder">Имя держателя</label>
+                <input
+                type="text"
+                id="cardholder"
+                placeholder="IVAN PETROV"
+                required
+                />
+            </div>
+
+            <!-- Кнопка оплаты -->
+            <button type="submit" class="pay-btn">Оплатить</button>
+
+            <!-- Сообщение-заглушка -->
+            <div id="toastMessage" class="toast">
+                ✅ Платёж обработан. Ваша карма почищена.
+            </div>
+
+            <div class="secure-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" />
+                    <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" />
+                </svg>
+                
+            </div>
+        </form>
+    </div>
+
+    <script>
+        /**
+         * Простая заглушка — только имитация отправки.
+         * Никакие данные не передаются.
+         */
+        function handleSubmit(event) {
+            event.preventDefault(); // отменяем реальную отправку
+
+            // Показываем сообщение-заглушку
+            const toast = document.getElementById('toastMessage');
+            toast.classList.add('show');
+
+            // Опционально: скрыть через 5 секунд
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 5000);
+
+            // Можно добавить лог в консоль (для разработчика)
+            console.log('🛑 Заглушка: форма не отправлена. Данные:', {
+                cardNumber: document.getElementById('cardNumber').value,
+                expiry: document.getElementById('expiry').value,
+                cvc: document.getElementById('cvc').value,
+                cardholder: document.getElementById('cardholder').value,
+            });
+
+            // Возвращаем false, чтобы форма точно не отправилась
+            return false;
+        }
+
+        // Небольшие «маски» для удобства ввода (только для визуала)
+        document.getElementById('cardNumber').addEventListener('input', function(e) {
+            let value = this.value.replace(/\D/g, '');
+            if (value.length > 16) value = value.slice(0, 16);
+            let formatted = '';
+            for (let i = 0; i < value.length; i++) {
+                if (i > 0 && i % 4 === 0) formatted += ' ';
+                formatted += value[i];
+            }
+            this.value = formatted;
+        });
+
+        document.getElementById('expiry').addEventListener('input', function(e) {
+            let value = this.value.replace(/\D/g, '');
+            if (value.length > 4) value = value.slice(0, 4);
+            if (value.length >= 2) {
+                this.value = value.slice(0, 2) + ' / ' + value.slice(2);
+            } else {
+                this.value = value;
+            }
+        });
+
+        document.getElementById('cvc').addEventListener('input', function(e) {
+            this.value = this.value.replace(/\D/g, '').slice(0, 4);
+        });
+    </script>
+
+</body>
+</html>
